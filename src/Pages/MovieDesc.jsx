@@ -1,5 +1,5 @@
 import { useLocation } from "react-router";
-import { IMG_URL_LOW, IMG_URL_ORIGINAL } from "../API/constants";
+// import { IMG_URL_LOW, IMG_URL_ORIGINAL } from "../API/constants";
 import styles from "./MovieDesc.module.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,7 +24,9 @@ const MovieDesc = () => {
           <div className={styles.herosec}>
             <img
               className={styles.backdrop}
-              src={`${IMG_URL_ORIGINAL}${Desc.backdrop_path}`}
+              src={`${import.meta.env.VITE_IMG_URL_ORIGINAL}${
+                Desc.backdrop_path
+              }`}
               alt={Desc.title}
             />
             <div className={styles.blackdropfull}></div>
@@ -34,7 +36,7 @@ const MovieDesc = () => {
           <div className={styles.glass}>
             <img
               className={styles.sec1img}
-              src={`${IMG_URL_LOW}${Desc.poster_path}`}
+              src={`${import.meta.env.VITE_IMG_URL_LOW}${Desc.poster_path}`}
               alt={Desc.title}
             />
             <div className={styles.data}>

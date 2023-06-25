@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import {
-  BASE_URL,
-  END_URL,
-  IMG_URL_LOW,
-  POPMOVIE_URL,
-  POPSERIES_URL,
-} from "../API/constants";
+// import {
+//   BASE_URL,
+//   END_URL,
+//   IMG_URL_LOW,
+//   POPMOVIE_URL,
+//   POPSERIES_URL,
+// } from "../API/constants";
 
 const initialState = {
   movies: [],
@@ -23,7 +23,7 @@ export const fetchMovies = createAsyncThunk(
   async (page) => {
     let response = [];
     await axios
-      .get(`${POPMOVIE_URL}${page}`)
+      .get(`${import.meta.env.VITE_POPMOVIE_URL}${page}`)
       .then((res) => {
         response = res.data;
         // console.log(res.data);
@@ -40,7 +40,11 @@ export const fetchMoviesByid = createAsyncThunk(
   async (spec) => {
     let response = {};
     await axios
-      .get(`${BASE_URL}${spec.type}/${spec.id}${END_URL}`)
+      .get(
+        `${import.meta.env.VITE_BASE_URL}${spec.type}/${spec.id}${
+          import.meta.env.VITE_END_URL
+        }`
+      )
       .then((res) => {
         response = res.data;
         // console.log(res.data);
@@ -54,7 +58,7 @@ export const fetchMoviesByid = createAsyncThunk(
 export const fetchSeries = createAsyncThunk(
   "series/fetchSeries",
   async (page) => {
-    const res = await axios.get(`${POPSERIES_URL}${page}`);
+    const res = await axios.get(`${import.meta.env.VITE_POPSERIES_URL}${page}`);
     return res;
   }
 );
@@ -67,7 +71,9 @@ export const fetchslice = createSlice({
       state.isOpening = true;
       state.modalData.id = action.payload.id;
       state.modalData.title = action.payload.title;
-      state.modalData.poster = `${IMG_URL_LOW}${action.payload.poster}`;
+      state.modalData.poster = `${import.meta.env.VITE_IMG_URL_LOW}${
+        action.payload.poster
+      }`;
       state.modalData.genre = action.payload.genre;
     },
     closeModal: (state) => {

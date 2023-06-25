@@ -22,7 +22,7 @@ const Navbar = () => {
   const [user, setUser] = useState(fetcheduser);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  console.log(isOpen);
+
   useEffect(() => {
     let locUser = localStorage.getItem("user");
     locUser = JSON.parse(locUser);
@@ -80,7 +80,7 @@ const Navbar = () => {
           </div>
           <div
             onClick={() => {
-              navigate("/home/movies");
+              navigate("movies");
             }}
             className="nav-row"
           >

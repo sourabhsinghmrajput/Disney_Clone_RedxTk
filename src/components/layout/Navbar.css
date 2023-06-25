@@ -71,7 +71,7 @@
   animation: nav-ani 1s forwards ease-in;
 }
 .profile-overlay {
-  background-color: rgb(56, 56, 73);
+  background-color: #090b13;
   position: fixed;
   z-index: 50;
   right: 4vw;
