@@ -1,0 +1,82 @@
+.parent {
+  z-index: -1;
+  text-align: center;
+}
+
+.bgimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 11vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.blue-big-btn {
+  background-color: rgb(33, 33, 243);
+  width: 100%;
+  border-radius: 4px;
+  padding: 0.8em;
+  margin: 10px 0px;
+}
+
+.center {
+  position: absolute;
+  z-index: 10;
+  /* top: 30vh;
+  left: 28%;
+  max-width: 700px; */
+}
+
+.login-desc {
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .center {
+    top: 30vh;
+    left: 8%;
+    right: 8%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .center {
+    top: 30vh;
+    left: 8%;
+    right: 8%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .center {
+    left: 14%;
+    right: 14%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .center {
+    top: 28vh;
+    left: 18%;
+    right: 18%;
+    max-width: 800px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+  .center {
+    top: 28vh;
+    left: 25%;
+    right: 25%;
+    max-width: 800px;
+  }
+}

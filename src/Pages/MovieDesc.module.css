@@ -1,0 +1,136 @@
+.backdrop {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.herosec {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+}
+
+.blur {
+  position: absolute;
+  left: 0px;
+  height: 100vh;
+  width: 45%;
+  /* z-index: 2; */
+  backdrop-filter: blur(1px);
+  object-fit: contain;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  /* background: linear-gradient(
+    to right,
+    rgba(255, 255, 0, 0.1),
+    rgba(0, 0, 0, 0)
+  ); */
+}
+
+.blur1 {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0px;
+  backdrop-filter: blur(1px);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+/* .section1 {
+  height: 100vh;
+  width: 100%; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  padding-left: 8vw;
+  padding-bottom: 8vw;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+} 
+*/
+
+.sec1img {
+  height: 45vh;
+  border-radius: 0.8rem;
+  /* margin-left: 6rem; */
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  animation: FadeIn 1s linear;
+  animation-fill-mode: backwards;
+  /* animation-delay: 0.5s; */
+  transition: 0.2s;
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.data {
+  max-width: 40vw;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 3.3rem;
+  padding-bottom: 1.5rem;
+  color: white;
+}
+
+.overview {
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+  line-height: 1.15rem;
+  color: white;
+}
+
+.glass {
+  padding: 50px;
+  margin-bottom: 20vh;
+  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(0, 0, 0, 0.1); */
+  z-index: 10;
+  display: flex;
+  align-items: center;
+
+  gap: 3vw;
+  position: relative;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+  /* animation: blurani 5s infinite ease-in-out; */
+}
+.sub {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.blackdropfull {
+  position: absolute;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
